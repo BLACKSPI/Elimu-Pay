@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -35,7 +36,7 @@ var coopAC = document.getElementById("coopAC");
 
 var addSchool = document.getElementById("addSchool");
 
-function insertData() {
+function InsertData() {
   set(ref(db, "School/" + sName.value),
     {
       "School Name": sName.value,
@@ -54,5 +55,9 @@ function insertData() {
     });
     }
 
+function now() {
+      alert("hello")
+    }
 // assign events to buttons
-addSchool.addEventListener("click", insertData);
+addSchool.addEventListener("click", InsertData);
+

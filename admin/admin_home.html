@@ -39,68 +39,13 @@
 
         <br>
         <br>
-        <button type="submit" id="addSchool">Add School</button>
+        <button type="submit" onclick="save()" id="addSchool">Add School</button>
  
 
-    
-    <!-- <script src="./js/admin.js"></script> -->
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyA41TSZcwPpgIJMQu4QklY-2s8rJmHNdEw",
-          authDomain: "elimu-pay.firebaseapp.com",
-          databaseURL: "https://elimu-pay-default-rtdb.firebaseio.com",
-          projectId: "elimu-pay",
-          storageBucket: "elimu-pay.appspot.com",
-          messagingSenderId: "282414316037",
-          appId: "1:282414316037:web:fe8ba8144036dc70917a6c",
-          measurementId: "G-CC9HDKLT7T"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
 
-        const db = getDatabase();
-
-// get references
-
-var sName = document.getElementById("sName");
-var mpesa = document.getElementById("mpesa");
-var kcbAC = document.getElementById("kcbAC");
-var equityAC = document.getElementById("equityAC");
-var coopAC = document.getElementById("coopAC");
-
-var addSchool = document.getElementById("addSchool");
-
-function insertData() {
-  set(ref(db, "School/" + sName.value),
-    {
-      "School Name": sName.value,
-      "Mpesa": mpesa.value,
-      "KCB": kcbAC.value,
-      "Equity": equityAC.value,
-      "Coop": coopAC.value
-
-    }
-  )
-    .then(() => {
-      alert("data has been stored successfully")
-    })
-    .catch((error) => {
-      alert("Unsuccessfull error" + error);
-    });
-    }
-
-// assign events to buttons
-addSchool.addEventListener("click", insertData);
-      </script>
+<script src="./js/admin.js"></script>
+   
 </body>
 </html>
