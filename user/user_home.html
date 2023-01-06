@@ -1,1 +1,67 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=7, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/ad49a7b104.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="namefield">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Name">
+
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>   
+                    <input type="email" placeholder="Email">
+
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" placeholder="password">
+                </div>
+                <p>Lost password? <a href="#">Click Here</a></p>
+
+            </div>
+            <div class="btn-field">
+                <button type="button" id="btnsign-up">Sign up</button>
+                <button type="button" id="btnsign-in" class="disable">Sign in</button>
+            </div>
+            </form>
+
+            
+        </form>
+
+
+    </div>
+
+    </div>
+    <script>
+        let btnsign-up = document.getElementById("btnsign-up");
+        let btnsign-in = document.getElementById("btnsign-in");
+        let namefield = document.getElementById("amefield");
+        let title = document.getElementById("title");
+
+        btnsignin.onclick = function(){
+            nameField.style.maxHeight="0";
+            title.innerHTML= "Sign in";
+            btnsign-in.classList.add("disable");
+            btnsign-up.classList.remove("disable");
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>
